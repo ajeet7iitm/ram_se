@@ -1,0 +1,118 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="description" content="">
+    
+    <title>Blog Lite</title>
+
+   
+
+    
+
+    <!-- Bootstrap core CSS -->
+
+
+    <style> 
+
+    .blue-color {
+        color:blue;
+    }  
+    .green-color {
+        color:green;
+    }
+     
+    .teal-color {
+        color:teal;
+    }
+     
+    .yellow-color {
+    color:yellow;
+    }
+    
+    .red-color {
+        color:red;
+    
+    </style>
+
+    
+    <!-- Custom styles for this template -->
+
+  </head>
+  
+  <body class="text-center" style="background-color:rgb(192, 176, 222)">
+    
+<link href="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" rel="stylesheet" id="bootstrap-css">
+<script src="//maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
+<script src="//cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+<!------ Include the above in your HEAD tag ---------->
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css">
+
+
+<div class="container">
+
+<div class="row ">
+    <div class="col-8">
+	<br><br><br><br><br>
+      <img class="mb-4" src="{{ url_for('static', filename='bloglogo.png')}}" alt="" width="300" height="300"/></p></p></p></p></p></p></p></p>
+    </div>
+
+<div class="col">
+<div class="row">
+
+<div class="card bg-light">
+<article class="card-body mx-auto" style="max-width: 400px;">
+	<h4 class="card-title mt-3 text-center">Create Account</h4>
+	<p class="text-center">Get started with your free account</p>
+	
+
+	<form action="/api/discourse/register" method="post" oninput='password1.setCustomValidity(password1.value != password.value ? "Passwords do not match." : "")'>
+        <h4><div class="msg text-danger">{{msg}}</div></h4>
+       
+        <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-envelope"></i> </span>
+		 </div>
+        <input name="email" class="form-control" placeholder="Email address" type="email" required value="{{email}}">
+    </div> <!-- form-group// -->
+    
+	<!-- form-group// --> 
+
+	<div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock red-color"></i> </span>
+		</div>
+        <input name="password" class="form-control" placeholder="Create password" type="password"  required value="{{password}}">
+    </div> 
+	<!-- form-group// -->
+	
+    <div class="form-group input-group">
+    	<div class="input-group-prepend">
+		    <span class="input-group-text"> <i class="fa fa-lock red-color"  ></i> </span>
+		</div>
+        <input class="form-control" placeholder="Repeat password" type="password" name="password1" required value="{{password1}}">
+    </div>
+	<!-- form-group// -->                                      
+    
+	
+	
+	<div class="form-group">
+        <button type="button submit" class="btn btn-primary btn-block"> Create Account  </button>
+    </div> <!-- form-group// --> 
+         
+    <p class="text-center">Have an account? <a href="/sitaram">Log In</a> </p>                                                                 
+</form>
+</article>
+</div> <!-- card.// -->
+
+</div> 
+<!--container end.//-->
+</div>
+</div>
+</article>
+
+    
+  </body>
+</html>
